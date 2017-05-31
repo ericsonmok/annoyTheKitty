@@ -4,8 +4,7 @@
 <title>Annoy the Kitty! (Typing Game)</title>
 <meta charset = "utf-8">
 <link rel = "stylesheet" type = "text/css" href = "style.css" />
-<script src = "script.js"></script>
-<script src = "script2.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Londrina+Solid" rel="stylesheet" />
 </head>
 <body>
   <div class="container">
@@ -15,19 +14,23 @@
     <div class="instructions">
       <h2> by typing out the words quickly and correctly.</h2>
     </div>
-    <div class="score">
+    <div class="scoreRack">
       <p>Score</p>
+      <span class="score">0</span>
     </div>
-    <div class="time">
-      <p>Time:</p>
-      <span class="counter">122</span>
+    <div class="timeRack">
+      <p>Time</p>
+      <span class="time">120</span>
     </div>
     <div class="start">
-      <button>Start!</button>
+      <button id="startButton">Start!</button>
     </div>
-    <div class="wordSpace">
-      <p class="word"></p>
+    <div class="wordRack">
+      <p class="word">
+      </p>
     </div>
   </div>
+  <script type="text/javascript"  src="./script.js"></script>
+  <script type="text/javascript"  src="./script2.js"></script>
 </body>
 </html>

@@ -1,61 +1,70 @@
-h1 {
-  color: white;
-}
-h2 {
-  margin-bottom: 5%;
-  color: white;
+* {
+  margin: 0;
+  padding: 0;
+  background-color: orange;
+  font-family: 'Londrina Solid', cursive;
 }
 .container {
   max-width: 900px;
+  height: 500px;
   margin: 0 auto;
-  width: 100%
-  background-image: url("cat-attacking-fingers/IMG_01-min.png");
+  background-image: url("cat-attacking-fingers/1.png");
   background-position: center;
   background-repeat: no-repeat;
 }
 .name {
   font-size: 30px;
-  text-align: left;
+  text-align: center;
+  color: black;
 }
 .instructions {
-
+  text-align: center;
 }
-.score {
+.scoreRack {
+  position: relative;
   font-size: 30px;
-  color: white;
+  color: black;
   float: left;
+  text-align: center;
+  text-transform: uppercase;
 }
-.time {
+.timeRack {
   font-size: 30px;
-  color: white;
+  color: black;
   float: right;
-}
-.counter {
-  padding: 10px;
-  border: 1px solid #9d9d9d;
-  margin: 0 auto;
-  font-size: 25px;
-}
-.wordSpace {
-  margin-top: 50px;
+  text-align: center;
+  text-transform: uppercase;
 }
 .word {
-  font-size: 60px;
-  color: white;
-  letter-spacing: 2px;
+  font-size: 30px;
+  color: black;
+  letter-spacing: 1px;
+  display: inline;
 }
-.start {
+.wordRack {
+  width: 200px;
+  position: absolute;
+  left: 130px;
+  bottom: 230px;
+}
+.bg {
+  background-color: green;
+}
+#startButton {
   border: none;
-  background-color: #FF7373;
-  box-shadow: 0px 5px 0px 0px #CE4646;
+  background-color: green;
+  box-shadow: 0px 0px 0px 0px #CE4646;
   outline: none;
-  border-radius: 5px;
+  border-radius: 2px;
   padding: 10px 15px;
-  font-size: 22px;
+  font-size: 30px;
   text-decoration: none;
-  margin: 20px;
+  margin: 30px;
   color: #fff;
   position: relative;
   display: inline-block;
   cursor: pointer;
+  position: absolute;
+  right: 130px;
+  bottom: 200px;
 }
