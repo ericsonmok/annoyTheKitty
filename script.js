@@ -3,7 +3,6 @@ var typed;
 var points = 0;
 var seconds = 120;
 var time = document.querySelector(".time");
-var timerDiv = document.querySelector(".time");
 var button = document.querySelector("button");
 var score = document.querySelector(".score");
 var word = document.querySelector(".word");
@@ -29,7 +28,7 @@ function genWord() {
   for (var i = 0; i < wordArray.length; i++) {
     var wordElm = document.createElement("span");
     wordElm.classList.add("spanWord");
-    wordElm.innerHTML = wordArray[i]  ;
+    wordElm.innerHTML = wordArray[i];
     word.appendChild(wordElm);
   }
   spans = document.querySelectorAll(".spanWord");
@@ -45,11 +44,12 @@ function countdown() {
   };
 function update() {
       // button.disabled = true;
-      seconds--;
+      --seconds;
       time.innerHTML = seconds;
       if (seconds === 0) {
-        alert("Game over! Your score is " + points);
         score.innerHTML = "0";
+        time.innerHTML = "0";
+        setTimeout(function(){alert("Game over! Your score is " + points)},100);
         word.innerHTML = "";
         button.disabled = false;
         seconds = 120;
@@ -62,6 +62,8 @@ function update() {
 
 // To check the input letter if it matches with the random generated word.
 // Each matching letter will have its background highlighted green.
+// Upon successful matched word, scores will be increased,
+// followed by the generation of a new image and word.
 function checkKey(t) {
   typed = t;
   for (var i = 0; i < spans.length; i++) {
@@ -72,6 +74,7 @@ function checkKey(t) {
           && spans[i-1] === undefined
           || spans[i-1].classList.contains("bg") !== false) {
           spans[i].classList.add("bg");
+          displayNextImage();
           break;
         }
       }
@@ -89,11 +92,11 @@ function checkKey(t) {
         word.className = "word";
         word.innerHTML = "";
         genWord();
-        displayNextImage();
       });
     }
   }
 };
+// Images of the cat
 var images = [], x = 0;
 images[0] = "cat-attacking-fingers/1.png";
 images[1] = "cat-attacking-fingers/2.png";
@@ -142,6 +145,7 @@ images[43] = "cat-attacking-fingers/44.png";
 images[44] = "cat-attacking-fingers/45.png";
 images[45] = "cat-attacking-fingers/46.png";
 
+// Create a function to change the image
 function displayNextImage() {
   var img = document.getElementById("img");
   img.src = images[x];
