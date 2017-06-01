@@ -6,11 +6,8 @@
 }
 .container {
   max-width: 900px;
-  height: 500px;
+  height: auto;
   margin: 0 auto;
-  background-image: url("cat-attacking-fingers/1.png");
-  background-position: center;
-  background-repeat: no-repeat;
 }
 .name {
   font-size: 30px;
@@ -35,20 +32,28 @@
   text-align: center;
   text-transform: uppercase;
 }
-.word {
-  font-size: 30px;
-  color: black;
-  letter-spacing: 1px;
-  display: inline;
-}
 .wordRack {
   width: 200px;
   position: absolute;
   left: 130px;
   bottom: 230px;
 }
+.word {
+  font-size: 30px;
+  color: black;
+  letter-spacing: 1px;
+  display: inline;
+}
 .bg {
   background-color: green;
+}
+#img {
+  border-radius: 7px;
+  height: auto;
+  display: block;
+  width: 300px;
+  margin: auto;
+  position: relative;
 }
 #startButton {
   border: none;
