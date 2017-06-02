@@ -1,3 +1,5 @@
+https://ericsonmok.github.io/annoyTheKitty/
+
 Game Objective:
 Let's see how many words you can type within 2 minutes.
 
