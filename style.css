@@ -65,12 +65,10 @@ body {
   padding: 10px 15px;
   font-size: 30px;
   text-decoration: none;
-  margin: 30px;
+  margin: auto;
   color: #fff;
   position: relative;
-  display: inline-block;
   cursor: pointer;
-  position: absolute;
-  right: 130px;
+  float: right;
   bottom: 200px;
 }
